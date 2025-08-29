@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vishal Niture | Full Stack Java Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#home" class="brand">Vishal Niture</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="section hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <p class="greeting">Hello, I'm</p>
+                    <h1 class="name">Vishal Niture</h1>
+                    <h2 class="role">
+                        <span class="typewriter-prefix">A </span>
+                        <span id="typewriter" class="typewriter" aria-label="Full Stack Java Developer"></span>
+                    </h2>
+                    <p class="summary">Recent graduate with a strong foundation in Java and SQL, eager to contribute to innovative projects, solve complex problems, and grow as a developer. Passionate about building real-world applications using modern Java and web technologies.</p>
+                    <div class="cta-group">
+                        <a class="btn primary" href="#projects">View Projects</a>
+                        <a class="btn ghost" href="#contact">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div class="profile-blob">
+                        <img src="./assets/images/profile.jpg" alt="Profile photo" />
+                        <div class="floating-badges">
+                            <span>Java</span>
+                            <span>Spring</span>
+                            <span>React</span>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bg"></div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container two-col">
+                <div>
+                    <h3 class="section-title">About</h3>
+                    <p>Recent graduate with a strong foundation in Java and SQL, seeking an entry-level position to leverage technical skills in software development and database management. Highly motivated to contribute to innovative projects, solve complex problems, and continually expand my knowledge in a dynamic work environment. Eager to apply my academic learning and passion for coding to real-world applications.</p>
+                    <ul class="about-highlights">
+                        <li>Java, SQL, Advanced Java, HTML, CSS, JavaScript</li>
+                        <li>Frameworks: Hibernate, Servlet, Spring MVC, Spring Boot</li>
+                        <li>APIs: JDBC, RESTful APIs</li>
+                        <li>Databases: MySQL, Oracle, PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="about-card">
+                    <h4>What I value</h4>
+                    <p>Readable code, pragmatic engineering, and a user-first mindset.</p>
+                    <h4>Currently</h4>
+                    <p>Exploring serverless patterns and performance tuning JVM services.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section alt">
+            <div class="container">
+                <h3 class="section-title">Education</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>B-Tech in Computer Science</h4>
+                            <p class="meta">PES College Of Engineering, Aurangabad · 2021 – 2024</p>
+                            <p>Coursework in data structures, algorithms, databases, and software engineering.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Diploma in Mechanical Engineering</h4>
+                            <p class="meta">Rajiv Gandhi Polytechnic, Udgir · 2018 – 2021</p>
+                            <p>Developed analytical and problem-solving skills applicable to engineering projects.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Shyamlal Memorial High School</h4>
+                            <p class="meta">Udgir · 2017 – 2018</p>
+                            <p>Completed secondary education with a focus on science and mathematics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h3 class="section-title">Experience</h3>
+                <div class="cards">
+                    <article class="card">
+                        <h4>Internship in Test Yantra</h4>
+                        <p class="meta">Intern</p>
+                        <ul>
+                            <li>Contributed to writing and optimizing SQL queries for data retrieval, insertion, updates and deletion in relational databases.</li>
+                            <li>Collaborated with a team to develop and integrate RESTful APIs for seamless data exchange between frontend and backend systems.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section alt">
+            <div class="container">
+                <h3 class="section-title">Projects</h3>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="./assets/images/project1.jpg" alt="Rock Paper Scissor" />
+                        <div class="project-info">
+                            <h4>Rock Paper Scissor</h4>
+                            <p>Interactive game built with React, JavaScript, HTML, and CSS. Implemented game logic and state with React hooks, dynamic result rendering, and responsive UI.</p>
+                            <div class="links">
+                                <a href="#" target="_blank" rel="noopener">Demo</a>
+                                <a href="https://github.com/vishalpv-107/Dowork.git" target="_blank" rel="noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="./assets/images/project2.jpg" alt="SyncNote" />
+                        <div class="project-info">
+                            <h4>SyncNote: Standalone Notepad</h4>
+                            <p>Complete Notepad application with Java Swing and AWT. Features menus (File, Edit, CMD) and robust file handling: open, save, and create new text files via dialog.</p>
+                            <div class="links">
+                                <a href="#" target="_blank" rel="noopener">Demo</a>
+                                <a href="#" target="_blank" rel="noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="./assets/images/project3.jpg" alt="Additional Project" />
+                        <div class="project-info">
+                            <h4>Additional Project</h4>
+                            <p>A space for future work. Replace with another project highlighting Java, Spring, or SQL expertise.</p>
+                            <div class="links">
+                                <a href="#" target="_blank" rel="noopener">Demo</a>
+                                <a href="#" target="_blank" rel="noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h3 class="section-title">Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <div class="skill-header"><span>Java</span><span>Advanced</span></div>
+                        <div class="progress"><span style="width: 90%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-header"><span>SQL</span><span>Advanced</span></div>
+                        <div class="progress"><span style="width: 88%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-header"><span>HTML/CSS/JavaScript</span><span>Intermediate</span></div>
+                        <div class="progress"><span style="width: 80%"></span></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-header"><span>Spring Boot / Spring MVC</span><span>Intermediate</span></div>
+                        <div class="progress"><span style="width: 75%"></span></div>
+                    </div>
+                    <div class="badges">
+                        <span class="badge">Hibernate</span>
+                        <span class="badge">Servlet</span>
+                        <span class="badge">JDBC</span>
+                        <span class="badge">RESTful APIs</span>
+                        <span class="badge">MySQL</span>
+                        <span class="badge">Oracle</span>
+                        <span class="badge">PostgreSQL</span>
+                        <span class="badge">VS Code</span>
+                        <span class="badge">Eclipse</span>
+                        <span class="badge">Sublime</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="section alt">
+            <div class="container center">
+                <h3 class="section-title">Resume</h3>
+                <p>Download my latest resume as a PDF.</p>
+                <div class="cta-group">
+                    <a id="resumeBtn" class="btn primary" href="./assets/resume.pdf" download>Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container two-col">
+                <div>
+                    <h3 class="section-title">Contact</h3>
+                    <ul class="contact-list">
+                        <li><a href="mailto:vishalmallikarjunniture@gmail.com">vishalmallikarjunniture@gmail.com</a></li>
+                        <li><a href="tel:+919021889782">+91 9021889782</a></li>
+                        <li><a href="https://www.linkedin.com/in/vishal-niture-0b6269381/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://github.com/vishalpv-107" target="_blank" rel="noopener">GitHub</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="year"></span> Vishal Niture. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
