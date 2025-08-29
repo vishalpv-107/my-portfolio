@@ -13,10 +13,24 @@ if (hamburger && navLinks) {
 }
 
 // Active nav link on scroll
-const sections = $$('#home, #about, #education, #experience, #projects, #skills, #resume, #contact');
+const sections = $$('#home, #about, #education, #experience, #projects, #skills, #contact');
 const navAnchors = $$('.nav-links a');
+let lastClickedEl = null;
+navAnchors.forEach(a => {
+  a.addEventListener('click', () => {
+    lastClickedEl = a;
+  });
+});
 const setActive = (id) => {
-  navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${id}`));
+  const target = `#${id}`;
+  const matches = navAnchors.filter(a => a.getAttribute('href') === target);
+  navAnchors.forEach(a => a.classList.remove('active'));
+  if (matches.length === 1) {
+    matches[0].classList.add('active');
+  } else if (matches.length > 1) {
+    const chosen = (lastClickedEl && matches.includes(lastClickedEl)) ? lastClickedEl : matches[0];
+    chosen.classList.add('active');
+  }
 };
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });

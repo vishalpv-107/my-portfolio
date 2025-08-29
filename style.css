@@ -86,7 +86,7 @@ body {
 .role { margin: 0 0 16px; font-weight: 500; color: var(--coffee-700); }
 .typewriter-prefix { opacity: 0.8; }
 .summary { margin: 0 0 20px; color: #4a4a4a; }
-.cta-group { display: flex; gap: 0.75rem; justify-content: center;}
+.cta-group { display: flex; gap: 0.75rem; }
 
 .btn {
   display: inline-block;
@@ -104,23 +104,17 @@ body {
 .hero-media { position: relative; }
 .profile-blob { position: relative; width: 100%; max-width: 360px; margin: 0 auto; }
 .profile-blob img { width: 100%; height: auto; border-radius: 20px; box-shadow: 0 20px 50px rgba(59, 47, 47, 0.25); }
-.floating-badges { position: absolute; inset: 0; pointer-events: none; }
-.floating-badges span {
-  position: absolute;
-  background: white;
-  color: var(--coffee-900);
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-  animation: float 6s ease-in-out infinite;
-}
-.floating-badges span:nth-child(1) { top: -10px; left: -14px; animation-delay: 0s; }
-.floating-badges span:nth-child(2) { bottom: -12px; left: 20%; animation-delay: 1s; }
-.floating-badges span:nth-child(3) { top: 20%; right: -12px; animation-delay: 2s; }
-.floating-badges span:nth-child(4) { bottom: 10%; right: 10%; animation-delay: 3s; }
-
-@keyframes float { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-8px);} }
+/* Hero large icon */
+.hero-icon { position: relative; width: 320px; height: 320px; margin: 0 auto; display: grid; place-items: center; }
+.icon-circle { width: 220px; height: 220px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(220px 220px at 50% 50%, rgba(196,154,108,0.18), rgba(255,249,243,0.8)); box-shadow: 0 12px 30px rgba(59,47,47,0.15) inset; }
+.icon-glyph { font-size: 64px; font-weight: 700; color: var(--coffee-900); transform: translateZ(0); animation: breathe 3s ease-in-out infinite; }
+.icon-ring { position: absolute; border: 2px dashed rgba(196,154,108,0.55); border-radius: 50%; animation: spin 10s linear infinite; }
+.icon-ring.ring-1 { width: 280px; height: 280px; animation-duration: 12s; }
+.icon-ring.ring-2 { width: 320px; height: 320px; animation-duration: 18s; animation-direction: reverse; opacity: 0.7; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes breathe { 0%,100% { transform: scale(1);} 50% { transform: scale(1.06);} }
+/* Orbit animation */
+/* removed orbit styles */
 
 .hero-bg {
   position: absolute;
@@ -132,8 +126,11 @@ body {
 }
 
 /* About */
-.two-col { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; }
-.about-card { background: white; border: 1px solid var(--cream-200); border-radius: 14px; padding: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; align-items: center; }
+.about-photo { min-height: 55vh; display: grid; place-items: center; }
+.about-photo img { width: 100%; max-width: 480px; height: auto; border-radius: 18px; box-shadow: 0 20px 50px rgba(59,47,47,0.25); }
+.about-content {}
+.about-card { background: white; border: 1px solid var(--cream-200); border-radius: 14px; padding: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); margin-top: 12px; }
 .about-highlights { padding-left: 1.1rem; }
 
 /* Timeline */
@@ -152,11 +149,10 @@ body {
 /* Projects */
 .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
 .project-card { position: relative; overflow: hidden; border-radius: 16px; border: 1px solid var(--cream-200); background: white; }
-.project-card img { width: 100%; height: 180px; object-fit: cover; display: block; transition: transform 300ms ease; }
+.project-card.text-only { padding-top: 6px; }
 .project-info { padding: 14px; }
 .project-card .links { display: flex; gap: 10px; }
 .project-card .links a { color: var(--coffee-900); text-decoration: none; border-bottom: 1px dashed var(--accent); }
-.project-card:hover img { transform: scale(1.06); }
 
 /* Skills */
 .skills-grid { display: grid; grid-template-columns: 1.2fr; gap: 1rem; }
@@ -168,15 +164,14 @@ body {
 .badge { background: white; color: var(--coffee-900); border: 1px solid var(--cream-200); border-radius: 999px; padding: 6px 10px; font-size: 12px; }
 
 /* Contact */
-.contact-list { list-style: none; margin: 0 0 18px; padding: 0; }
-.contact-list li { margin-bottom: 6px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+.contact-list { list-style: none; margin: 0; padding: 0; }
+.contact-list li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
 .contact-list a { color: var(--coffee-900); text-decoration: none; border-bottom: 1px dashed var(--accent); }
-.contact-form { background: white; border: 1px solid var(--cream-200); border-radius: 14px; padding: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-.form-field { display: grid; gap: 6px; margin-bottom: 12px; }
-.form-field input, .form-field textarea { padding: 10px 12px; border-radius: 10px; border: 1px solid var(--cream-200); font: inherit; background: var(--cream-50); }
-.form-field input:focus, .form-field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(196,154,108,0.2); }
-.error { color: #bb3b3b; font-size: 0.85rem; height: 0.85rem; }
-.form-status { margin-top: 10px; color: var(--coffee-700); }
+.contact-icon { width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; color: var(--coffee-900); }
+.contact-card { background: white; border: 1px solid var(--cream-200); border-radius: 14px; padding: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.contact-cta { background: linear-gradient(180deg, var(--cream-100), #ffffff); border: 1px solid var(--cream-200); border-radius: 14px; padding: 18px; text-align: center; display: grid; gap: 10px; }
+.contact-cta .btn { justify-self: center; }
 
 /* Footer */
 .footer { padding: 28px 0; border-top: 1px solid var(--cream-200); background: var(--cream-100); color: var(--coffee-700); text-align: center; }
@@ -186,7 +181,7 @@ body {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .hero-grid, .two-col { grid-template-columns: 1fr; }
+  .hero-grid, .two-col, .about-grid, .contact-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
   .nav-links { display: none; position: absolute; right: 1rem; top: 64px; background: white; border: 1px solid var(--cream-200); border-radius: 12px; padding: 0.5rem; flex-direction: column; width: 200px; }
